@@ -1,0 +1,124 @@
+.login-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Aptos Narrow', sans-serif;
+}
+
+/* IZQUIERDA - Fondo de ciberseguridad */
+.login-left {
+  flex: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.login-left .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(10, 31, 68, 0.7); /* opacidad azul */
+  backdrop-filter: blur(3px);
+}
+
+/* DERECHA - Fondo azul sólido con formulario */
+.login-right {
+  flex: 1;
+  background-color: #0a1f44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- FORMULARIO (rediseñado) ---------- */
+.login-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 55px 45px;
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(0, 123, 255, 0.15);
+  text-align: center;
+  width: 360px;
+  color: #eaeaea;
+  animation: fadeIn 1s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: 0.4px;
+}
+
+.login-form p {
+  font-size: 0.95rem;
+  color: #a9b7c7;
+  margin-bottom: 28px;
+}
+
+/* ---------- INPUT ---------- */
+.login-form input {
+  width: 100%;
+  padding: 14px 15px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #eaeaea;
+  outline: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 6px rgba(0, 180, 255, 0.05);
+}
+
+.login-form input::placeholder {
+  color: #b0bec5;
+}
+
+.login-form input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #00b4ff;
+  box-shadow: 0 0 12px rgba(0, 180, 255, 0.35);
+  transform: scale(1.01);
+}
+
+/* ---------- BOTÓN ---------- */
+.login-form button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #007bff, #00b4ff);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.login-form button:hover {
+  background: linear-gradient(90deg, #00b4ff, #007bff);
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+/* ---------- Efecto animación ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

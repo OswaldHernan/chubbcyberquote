@@ -1,0 +1,45 @@
+.splash-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a1f44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.splash-logo {
+  width: 500px;
+  height: auto;
+  opacity: 0;
+  animation: logoPulse 5s ease-in-out infinite;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* efecto de “brillo cibernético” */
+@keyframes logoPulse {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 4px #007bff);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 12px #00b4ff);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 4px #007bff);
+  }
+}
